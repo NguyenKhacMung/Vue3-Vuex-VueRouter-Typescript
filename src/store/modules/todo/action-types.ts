@@ -1,0 +1,6 @@
+export enum TodosActionTypes {
+  GET_ALL_TODOS = 'GET_ALL_TODOS',
+  GET_TODO_BY_STATUS = 'GET_TODO_BY_STATUS',
+  ADD_TODO = 'ADD_TODO',
+  UPDATE_TODO = 'UPDATE_TODO',
+}

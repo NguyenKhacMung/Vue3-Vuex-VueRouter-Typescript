@@ -1,0 +1,33 @@
+.container-todo {
+  // background-color: aliceblue;
+  padding: 30px 20px;
+  .header-todo {
+    margin-bottom: 30px;
+    img {
+      width: 36px;
+    }
+    h1 {
+      font-weight: 700;
+      line-height: 21px;
+      margin-left: 15px;
+    }
+    .action-todo {
+      svg {
+        font-size: 30px;
+        cursor: pointer;
+        color: #c4c4c4;
+        &:hover,
+        &.show {
+          color: #4e4e4e;
+        }
+      }
+      // .isShow {
+      //   background: #ffffff;
+      //   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.15);
+      //   border-radius: 5px 5px 0px 0px;
+      //   width: 36px;
+      //   height: 26px;
+      // }
+    }
+  }
+}

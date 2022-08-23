@@ -1,0 +1,46 @@
+#app {
+  .todo-item {
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+
+    &:hover {
+      box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.15);
+    }
+    &-checkbox {
+      margin: 0 16px 0 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      &:hover {
+        background-color: rgb(203, 203, 203);
+      }
+      &:checked {
+        background-color: #4e4e4e;
+        border: 1px solid #4e4e4e;
+      }
+    }
+    .icon-plus {
+      height: 25px;
+      width: 25px;
+      margin-right: 16px;
+      &:hover svg {
+        stroke: #fff;
+        fill: rgb(61, 130, 235);
+      }
+    }
+    .icon-remove {
+      margin-left: auto;
+      height: 36px;
+      width: 36px;
+      &:hover svg {
+        fill: orange;
+      }
+    }
+  }
+  .completed {
+    text-decoration: line-through;
+  }
+}

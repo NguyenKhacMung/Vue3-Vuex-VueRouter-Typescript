@@ -1,0 +1,255 @@
+{
+  "users": [
+    {
+      "id": "1584177315024",
+      "email": "trdbau@gmail.com",
+      "password": "123456",
+      "token": "1584177315024",
+      "name": "Tran Duy Bau"
+    },
+    {
+      "id": "1584177319076",
+      "email": "minhanh1306@gmail.com",
+      "password": "123456",
+      "token": "1584177319076",
+      "name": "Tran Minh Anh"
+    }
+  ],
+  "todos": [
+    {
+      "id": "511f0b89-f6ff-4d3f-b03d-23cbb83dd7ee",
+      "title": "Build a modern To do app",
+      "status": "inProgress",
+      "tag": "A"
+    },
+    {
+      "id": "2000c42e-df45-447c-8293-bcf4657b0359",
+      "title": "Workout for 30 minutes at the gym",
+      "status": "completed",
+      "tag": "A"
+    },
+    {
+      "id": "78249ac4-b592-4b08-bd05-1aac49b90a38",
+      "title": "Buy groceries (milk, vegetables, fruits, fish)",
+      "status": "inProgress",
+      "tag": "A"
+    },
+    {
+      "id": "174070ac-0301-4ea9-9409-7ad596d35598",
+      "title": "Clean the house and backyard",
+      "status": "completed",
+      "tag": "A"
+    },
+    {
+      "id": "174070ac-0301-4ea9-9409-7ad596d35588",
+      "title": "Take the car to the autoshop for an oil change",
+      "status": "completed",
+      "tag": "A"
+    },
+    {
+      "id": "d5ac4e9e-c225-4c65-a9bb-4594ba29bd8b",
+      "title": "heheehh",
+      "status": "completed"
+    },
+    {
+      "id": "58e71b8e-50de-4758-b148-433a40957be3",
+      "title": "heheehhs",
+      "status": "completed"
+    },
+    {
+      "id": "9425f576-1119-456a-a823-8f5e193afb59",
+      "title": "sdfsdf",
+      "status": "completed"
+    },
+    {
+      "id": "50dcee7c-36dc-4855-9245-adedec2434e2",
+      "title": "sdfsdf",
+      "status": "inProgress"
+    },
+    {
+      "id": "777454c4-37f6-432e-812a-538abfed8693",
+      "title": "sdfsdffsdf",
+      "status": "completed"
+    },
+    {
+      "id": "4be45e0a-ed47-4fc3-941b-54795b16e607",
+      "title": "sdfsdffsdfsfsd",
+      "status": "inProgress"
+    },
+    {
+      "id": "117f3d46-54a7-4684-8895-2a0a55db3f7f",
+      "title": "fsdgdf",
+      "status": "removed"
+    },
+    {
+      "id": "24328f1b-2f60-4b94-b0f3-c9dccd498072",
+      "title": "fsdgdfdfgd",
+      "status": "removed"
+    },
+    {
+      "id": "42172eca-ace6-48e3-91f9-9d94a1ef0cd1",
+      "title": "fsdgdfdfgd",
+      "status": "removed"
+    },
+    {
+      "id": "496e6155-cdd6-44e5-a48c-7e2bc7409a5c",
+      "title": "fsdgdfdfgddfg",
+      "status": "completed"
+    },
+    {
+      "id": "1e921e6e-f38c-4e43-8644-d4943ac29809",
+      "title": "fsdgdfdfgddfgd",
+      "status": "removed"
+    },
+    {
+      "id": "95881e0a-a47b-4a3d-80fd-15e1ac4a395a",
+      "title": "fsdgdfdfgddfgdgd",
+      "status": "removed"
+    },
+    {
+      "id": "9c9b7ba3-70b5-4092-bfce-3442c60d5897",
+      "title": "fsdgdfdfgddfgdgdg",
+      "status": "removed"
+    },
+    {
+      "id": "99cc774e-1119-4e07-97fe-6f534302d235",
+      "title": "fsdgdfdfgddfgdgdgd",
+      "status": "removed"
+    },
+    {
+      "id": "d1aeb206-efb7-4cb1-8c7e-a4dfd15344ab",
+      "title": "fsdgdfdfgddfgdgdgdfg",
+      "status": "completed"
+    },
+    {
+      "id": "38a58706-80c1-424b-9fd0-e7145647fd89",
+      "title": "fhfghf",
+      "status": "removed"
+    },
+    {
+      "id": "5b7d472e-9cdd-4cf4-9557-75acd1a99aab",
+      "title": "fhfghfgjhghjg",
+      "status": "removed"
+    },
+    {
+      "id": "aea2d2ae-8118-44fd-a676-14b5477103d9",
+      "title": "fgdfhdf",
+      "status": "removed"
+    },
+    {
+      "id": "61e0fe25-2643-4d86-85ec-c1aecdf85e7b",
+      "title": "fgdfhdfdfg",
+      "status": "removed"
+    },
+    {
+      "id": "70b65eb2-ef61-4ed6-b720-eed23a9a5da0",
+      "title": "fgdfhdfdfgdfg",
+      "status": "removed"
+    },
+    {
+      "id": "1564fcd5-4424-48dd-8675-3259b6f9d995",
+      "title": "fgdfhdfdfgdfgdf",
+      "status": "removed"
+    },
+    {
+      "id": "9b935b73-8719-4057-9b11-231cde4de69b",
+      "title": "fgdfhdfdfgdfgdfgdf",
+      "status": "removed"
+    },
+    {
+      "id": "ef8b0dfb-321d-4567-9882-3b1e3e9052f2",
+      "title": "dfgdfg\\",
+      "status": "removed"
+    },
+    {
+      "id": "d8969c0b-5708-40fb-b35d-7140cc6ba95b",
+      "title": "dfgdfg\\dgdf",
+      "status": "removed"
+    },
+    {
+      "id": "c8f73e88-1e51-45ed-a3d6-624f71f90a0c",
+      "title": "dfgdfg\\dgdfgdf",
+      "status": "removed"
+    },
+    {
+      "id": "337d50eb-d903-470b-8f75-7fe683c037ca",
+      "title": "dfgdfg\\dgdfgdfg",
+      "status": "removed"
+    },
+    {
+      "id": "85851cb6-65b5-4327-bf2e-c4411623445b",
+      "title": "dfgdfg\\dgdfgdfgdfg",
+      "status": "removed"
+    },
+    {
+      "id": "a2420300-6a64-4e56-ab2e-6cc5b8de448d",
+      "title": "dfgdfg\\dgdfgdfgdfgdf",
+      "status": "removed"
+    },
+    {
+      "id": "608ce37f-3cd0-482b-b638-06cae655eca1",
+      "title": "dsfsdfsd",
+      "status": "completed"
+    },
+    {
+      "id": "c812ed1c-90fe-4f86-a884-8f6367b608f2",
+      "title": "dsfsdfsdsdf",
+      "status": "completed"
+    },
+    {
+      "id": "8f5d9d4f-3263-46dc-b4b5-4808406d9146",
+      "title": "dsfsdfsdsdfsdf",
+      "status": "completed"
+    },
+    {
+      "id": "049d3dba-8b75-4d88-b3ff-e4e56564b3e3",
+      "title": "dsfsdfsdsdfsdfsdf",
+      "status": "completed"
+    },
+    {
+      "id": "fbdd4733-58a2-4ea0-a65e-187ddb6c8af0",
+      "title": "dsfsdfsdsdfsdfsdfsd",
+      "status": "removed"
+    },
+    {
+      "id": "b5486236-91ef-4db4-85df-cdcd737a3a7a",
+      "title": "dghdgd",
+      "status": "removed"
+    },
+    {
+      "id": "57a0a49f-947f-4174-8c30-807017d05c48",
+      "title": "sdfsdfsdf",
+      "status": "inProgress"
+    },
+    {
+      "id": "16f03950-8743-4afe-b792-a76dfc76fa2e",
+      "title": "sdfsdfsdfs",
+      "status": "completed"
+    },
+    {
+      "id": "d497cd0a-1c1b-4fa9-9057-2f0e53937b92",
+      "title": "sdfsdfsdfsdf",
+      "status": "completed"
+    },
+    {
+      "id": "88f572a2-4643-4278-a59c-7154f6147f79",
+      "title": "sdfsdfsdfsdfs",
+      "status": "inProgress"
+    },
+    {
+      "id": "d93f7632-1fc5-43b4-944b-a8ca4846159f",
+      "title": "sdfsdfsdfsdfss",
+      "status": "completed"
+    },
+    {
+      "id": "900ccf18-cbc2-42ce-b3e5-2d7260bc16bc",
+      "title": "mung",
+      "status": "inProgress"
+    },
+    {
+      "id": "e88a3bc7-47ac-4368-ae8b-725c6caeac8e",
+      "title": "dfgdfgdfjh",
+      "status": "inProgress"
+    }
+  ]
+}
