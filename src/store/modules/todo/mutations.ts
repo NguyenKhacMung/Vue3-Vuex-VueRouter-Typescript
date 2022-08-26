@@ -1,7 +1,6 @@
 import { MutationTree } from 'vuex'
 import { TodosMutationTypes } from './mutation-types'
-import { State } from './state'
-import { Todo } from '@/store/interfaces'
+import { State, Todo } from './state'
 
 export type Mutations<S = State> = {
   [TodosMutationTypes.SET_TODOS](state: S, payload: Todo[]): void

@@ -31,7 +31,7 @@
     {
       "id": "78249ac4-b592-4b08-bd05-1aac49b90a38",
       "title": "Buy groceries (milk, vegetables, fruits, fish)",
-      "status": "inProgress",
+      "status": "completed",
       "tag": "A"
     },
     {
@@ -249,6 +249,11 @@
     {
       "id": "e88a3bc7-47ac-4368-ae8b-725c6caeac8e",
       "title": "dfgdfgdfjh",
+      "status": "inProgress"
+    },
+    {
+      "id": "efc9515e-c5d2-4e42-b0f0-a9d19d8da8cf",
+      "title": "sfsdfsd",
       "status": "inProgress"
     }
   ]

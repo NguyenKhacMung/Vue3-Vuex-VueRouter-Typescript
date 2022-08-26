@@ -1,6 +1,12 @@
-import { Todo } from '../../interfaces'
+export interface Todo {
+  id: string
+  title: string
+  description?: string
+  status: 'completed' | 'removed' | 'inProgress'
+  tag?: string
+}
 
-export type State = {
+export interface State {
   todos: Todo[]
 }
 export const state: State = {

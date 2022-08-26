@@ -1,6 +1,8 @@
+import { createNamespacedHelpers } from 'vuex'
 import * as CONSTANTS from '@/constants'
-import { mapActions } from 'vuex'
 import { defineComponent } from 'vue'
+const { mapState, mapActions } = createNamespacedHelpers('todosModule')
+import { TodosActionTypes } from '@/store/modules/todo/action-types'
 import { v4 as uuidv4 } from 'uuid'
 
 export default defineComponent({
@@ -13,7 +15,9 @@ export default defineComponent({
   },
   computed: {},
   methods: {
-    ...mapActions(['addTodo']),
+    ...mapActions({
+      addTodo: TodosActionTypes.ADD_TODO,
+    }),
     onKeyUp(e: Event) {
       e.preventDefault()
       const textValue = (<HTMLInputElement>e.target).value.trim()

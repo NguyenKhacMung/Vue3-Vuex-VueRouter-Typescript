@@ -1,11 +1,5 @@
-export interface Todo {
-  id: string
-  title: string
-  description?: string
-  status: 'completed' | 'removed' | 'inProgress'
-  tag?: string
-}
+import { State as TodoState } from '@/store/modules/todo'
 
-export interface IRootStore {
-  todos: Todo[]
+export type IRootState = {
+  todoState: TodoState
 }

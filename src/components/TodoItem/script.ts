@@ -1,6 +1,8 @@
-import { mapActions } from 'vuex'
-import { defineComponent, PropType, defineProps } from 'vue'
-import { Todo } from '@/store/interfaces'
+import { createNamespacedHelpers } from 'vuex'
+import { TodosActionTypes } from '@/store/modules/todo/action-types'
+import { defineComponent, PropType } from 'vue'
+import { Todo } from '@/store/modules/todo/state'
+const { mapState, mapActions } = createNamespacedHelpers('todosModule')
 import * as CONSTANTS from '@/constants'
 
 export default defineComponent({
@@ -18,7 +20,9 @@ export default defineComponent({
     }
   },
   methods: {
-    ...mapActions(['updateTodo']),
+    ...mapActions({
+      updateTodo: TodosActionTypes.UPDATE_TODO,
+    }),
     onChange(id: string, status: CONSTANTS.TYPE_STATUS) {
       console.log('onChange', id, status)
       this.updateTodo({ id, status })
