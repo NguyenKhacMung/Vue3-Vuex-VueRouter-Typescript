@@ -4,7 +4,7 @@ import * as CONSTANTS from '@/constants'
 import TodoItem from '@/components/TodoItem/todo-item.vue'
 import AddTodo from '@/components/AddTodo/add-todo.vue'
 import BaseItemDropdown from '@/components/BaseItemDropdown/base-item.vue'
-import { userStore } from '@/store'
+import { useStore } from 'vuex'
 import { TodosActionTypes } from '@/store/modules/todo/action-types'
 const { mapState, mapActions } = createNamespacedHelpers('todosModule')
 
@@ -37,7 +37,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const store = userStore()
+    const store = useStore()
     console.log('store', store)
     // async function fetchAllTodos() {
     //   try {
