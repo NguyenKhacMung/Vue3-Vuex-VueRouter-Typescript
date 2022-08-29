@@ -1,4 +1,5 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { accessToken } from '@/storage'
 
 const instance: AxiosInstance = axios.create({
   baseURL: 'http://localhost:3002',
@@ -15,7 +16,8 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 axios.interceptors.request.use(
   (config: AxiosRequestConfig): AxiosRequestConfig => {
     console.log('config', config)
-    const token = localStorage.getItem('access_token')
+    const token = accessToken.getLocalStorage()
+    console.log('token', token)
     if (token) config.headers!.Authorization = 'Bearer ' + token
     return config
   },
