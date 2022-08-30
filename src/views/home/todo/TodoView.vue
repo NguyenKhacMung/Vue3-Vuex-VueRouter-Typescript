@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <TodoApp/>
-  </div>
+  <TodoApp />
 </template>
 
 <script lang="ts" src="./script.ts">
