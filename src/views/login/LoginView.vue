@@ -3,12 +3,12 @@
     <b-row>
       <b-col cols="6" class="mx-auto mt-5">
         <b-form @submit.prevent="onSubmit">
-          <b-form-group id="input-group-1" label="Username:" label-for="input-name">
+          <b-form-group id="input-group-1" label="Email:" label-for="input-email">
             <b-form-input
-              id="input-name"
-              v-model="form.username"
+              id="input-email"
+              v-model="form.email"
               type="text"
-              placeholder="Enter username"
+              placeholder="Enter email"
             ></b-form-input>
           </b-form-group>
 

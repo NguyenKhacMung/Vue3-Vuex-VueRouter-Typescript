@@ -4,7 +4,7 @@ class LocalStorage {
   public getLocalStorage() {
     return localStorage.getItem(this.name)
   }
-  public setLocalStorage(value: string) {
+  public setLocalStorage(value: any) {
     return localStorage.setItem(this.name, value)
   }
   public removeLocalStorage() {
@@ -24,5 +24,6 @@ class LocalStorage {
 }
 
 const accessToken = new LocalStorage('access_token')
+const user = new LocalStorage('user')
 
-export { accessToken }
+export { accessToken, user }

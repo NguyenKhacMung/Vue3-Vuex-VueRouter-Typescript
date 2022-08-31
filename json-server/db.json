@@ -1,25 +1,24 @@
 {
   "users": [
     {
-      "id": "1584177315024",
-      "email": "admin@gmail.com",
-      "password": "123456",
-      "accessToken": "1584177315024",
-      "username": "admin"
+      "email": "mungdola999@gmail.com",
+      "password": "$2a$10$mwmNJACYM7SSVm.16iGaauc1KknOz21PTxFZ31/069QiZVLzE98Cy",
+      "username": "mung nguyen",
+      "id": 1
     },
     {
-      "id": "1584177319076",
-      "email": "mungnguyen@gmail.com",
-      "password": "123456",
-      "accessToken": "1584177319076",
-      "username": "mung"
+      "email": "mung@gmail.com",
+      "password": "$2a$10$vfz3DWir5Wnvlq.FKG5RlufT5CDYlIcaOUQoqvkJAcL5vVAeEn4Nm",
+      "username": "mung aaa",
+      "id": 2
     }
   ],
   "todos": [
     {
+      "userId": "1",
       "id": "511f0b89-f6ff-4d3f-b03d-23cbb83dd7ee",
       "title": "Build a modern To do app",
-      "status": "inProgress",
+      "status": "completed",
       "tag": "A"
     },
     {
@@ -64,7 +63,7 @@
     {
       "id": "50dcee7c-36dc-4855-9245-adedec2434e2",
       "title": "sdfsdf",
-      "status": "inProgress"
+      "status": "removed"
     },
     {
       "id": "777454c4-37f6-432e-812a-538abfed8693",
@@ -74,7 +73,7 @@
     {
       "id": "4be45e0a-ed47-4fc3-941b-54795b16e607",
       "title": "sdfsdffsdfsfsd",
-      "status": "inProgress"
+      "status": "removed"
     },
     {
       "id": "117f3d46-54a7-4684-8895-2a0a55db3f7f",

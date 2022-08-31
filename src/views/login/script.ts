@@ -8,7 +8,7 @@ export default defineComponent({
   data() {
     return {
       form: {
-        username: '',
+        email: '',
         password: '',
         checked: false,
       },

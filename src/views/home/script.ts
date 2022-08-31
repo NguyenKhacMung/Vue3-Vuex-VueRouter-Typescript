@@ -1,21 +1,27 @@
-import { defineComponent } from "vue";
-import { mapActions } from "vuex";
-import TodoApp from "@/components/Todos/todo-app.vue";
+import { AuthMutationTypes } from './../../store/modules/auth/mutation-types'
+import { createNamespacedHelpers } from 'vuex'
+import { defineComponent } from 'vue'
+const { mapActions, mapMutations } = createNamespacedHelpers('authModule')
+import { AuthActionTypes } from '@/store/modules/auth/action-types'
+import TodoApp from '@/components/Todos/todo-app.vue'
+
 export default defineComponent({
-  name: "HomeView",
+  name: 'HomeView',
   components: {
     TodoApp,
   },
   data() {
-    return {
-      cc: 54654,
-    };
+    return {}
   },
-  // created() {
-  //   this.getTodos();
-  //   // console.log("Created",  this.getTodos());
-  // },
-  // methods: {
-  //   ...mapActions(["getTodos"]),
-  // },
-});
+  created() {
+    this.loadUser();
+  },
+  methods: {
+    ...mapActions({
+      logOut: AuthActionTypes.LOG_OUT,
+    }),
+    ...mapMutations({
+      loadUser: AuthMutationTypes.LOAD_USER,
+    }),
+  },
+})

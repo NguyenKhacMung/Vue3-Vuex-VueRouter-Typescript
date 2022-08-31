@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { PATH } from './path'
+import { user } from '@/storage'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/login',
+    path: PATH.LOGIN,
     name: 'Login',
     component: () => import('@/views/login/LoginView.vue'),
   },
@@ -10,16 +12,19 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'home',
     component: () => import('@/views/home/HomeView.vue'),
+    meta: { requiresAuth: true },
     children: [
       {
-        path: '/todo',
+        path: '',
         name: 'todo',
         component: () => import('@/views/home/todo/TodoView.vue'),
+        meta: { requiresAuth: true },
       },
       {
-        path: '/about',
+        path: PATH.ABOUT,
         name: 'about',
         component: () => import('@/views/home/about/AboutView.vue'),
+        meta: { requiresAuth: true },
       },
     ],
   },
@@ -33,6 +38,30 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+})
+
+router.beforeEach((to, from, next) => {
+  // console.log('to', to, 'from', from, 'next', next)
+
+  // if (!authRequired && !loggedIn) {
+  //   return next('/login')
+  // }
+
+  // next()
+  const loggedIn = user.getLocalStorage()
+  if (to.meta.requiresAuth) {
+    if (!loggedIn) {
+      return next('/login')
+    }
+    next()
+  } else {
+    const publicPages = ['/login', '/register']
+    const authRequired = publicPages.includes(to.path)
+    if (loggedIn && authRequired) {
+      return next(from.path)
+    }
+    next()
+  }
 })
 
 export default router

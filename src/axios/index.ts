@@ -1,5 +1,7 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AuthActionTypes } from './../store/modules/auth/action-types'
 import { accessToken } from '@/storage'
+import { store } from '@/store'
 
 const instance: AxiosInstance = axios.create({
   baseURL: 'http://localhost:3002',
@@ -18,7 +20,11 @@ axios.interceptors.request.use(
     console.log('config', config)
     const token = accessToken.getLocalStorage()
     console.log('token', token)
-    if (token) config.headers!.Authorization = 'Bearer ' + token
+    if (token) {
+      config.headers!.Authorization = 'Bearer ' + token
+    } else {
+      delete axios.defaults.headers.common['Authorization']
+    }
     return config
   },
   (error: AxiosError): Promise<AxiosError> => {
@@ -40,7 +46,8 @@ axios.interceptors.response.use(
           console.log('error', error.response.data)
           break
         case 401:
-          console.error('unauthorised')
+          console.log('store', store)
+          store.dispatch('authModule/' + AuthActionTypes.LOG_OUT)
           break
         case 404:
           console.error('/not-found')

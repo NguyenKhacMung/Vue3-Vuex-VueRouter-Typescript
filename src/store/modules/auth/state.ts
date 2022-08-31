@@ -2,19 +2,14 @@ export interface IUser {
   id: string
   username: string
   password?: string
-  accessToken: string
-  email?: string
+  email: string
 }
 
 export interface State {
-  user: IUser,
+  user?: IUser
   isAuthenticated: boolean
 }
 export const state: State = {
   isAuthenticated: false,
-  user: {
-    id: '',
-    username: '',
-    accessToken: '',
-  },
+  user: null as any,
 }

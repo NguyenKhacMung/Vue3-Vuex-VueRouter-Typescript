@@ -39,7 +39,6 @@ export const actions: ActionTree<State, IRootState> & Actions = {
     try {
       const response = await todoService.getAllTodos()
       commit(TodosMutationTypes.SET_TODOS, response.data)
-      console.log('getTodos', response.data)
     } catch (error) {
       console.log(error)
     }
@@ -48,7 +47,6 @@ export const actions: ActionTree<State, IRootState> & Actions = {
     try {
       const response = await todoService.getTodoByStatus(payload)
       commit(TodosMutationTypes.SET_TODOS, response.data)
-      console.log('getTodoByStatus', response.data)
     } catch (error) {
       console.log(error)
     }
@@ -58,7 +56,6 @@ export const actions: ActionTree<State, IRootState> & Actions = {
       const { id, status } = payload
       const response = await todoService.updateTodo(id, { status })
       commit(TodosMutationTypes.UPDATE_TODO, response.data)
-      console.log('updateTodo', response.data)
     } catch (error) {
       console.log(error)
     }
@@ -67,7 +64,6 @@ export const actions: ActionTree<State, IRootState> & Actions = {
     try {
       const response = await todoService.addTodo(payload)
       commit(TodosMutationTypes.ADD_TODO, response.data)
-      console.log('addTodo', response.data)
     } catch (error) {
       console.log(error)
     }
