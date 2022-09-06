@@ -21,6 +21,12 @@ export default defineComponent({
     onSubmit(event: SubmitEvent) {
       // console.log('onSubmit', event)
       this.postLogin(this.form)
+        .then((res) => {
+          console.log('res', res)
+        })
+        .catch((error) => {
+          console.log('error', error)
+        })
     },
   },
 })

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { PATH } from './path'
-import { user } from '@/storage'
+import { userStorage } from '@/storage'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -48,7 +48,7 @@ router.beforeEach((to, from, next) => {
   // }
 
   // next()
-  const loggedIn = user.getLocalStorage()
+  const loggedIn = JSON.parse(userStorage.getLocalStorage()!)
   if (to.meta.requiresAuth) {
     if (!loggedIn) {
       return next('/login')

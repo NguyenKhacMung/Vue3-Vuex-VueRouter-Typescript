@@ -13,15 +13,11 @@ export default defineComponent({
   data() {
     return {}
   },
-  created() {
-    this.loadUser();
-  },
+  // created() {},
   methods: {
     ...mapActions({
       logOut: AuthActionTypes.LOG_OUT,
     }),
-    ...mapMutations({
-      loadUser: AuthMutationTypes.LOAD_USER,
-    }),
+    ...mapMutations({}),
   },
 })

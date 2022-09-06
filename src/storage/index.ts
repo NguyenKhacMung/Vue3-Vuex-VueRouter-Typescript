@@ -5,7 +5,7 @@ class LocalStorage {
     return localStorage.getItem(this.name)
   }
   public setLocalStorage(value: any) {
-    return localStorage.setItem(this.name, value)
+    return localStorage.setItem(this.name, JSON.stringify(value))
   }
   public removeLocalStorage() {
     return localStorage.removeItem(this.name)
@@ -16,7 +16,7 @@ class LocalStorage {
     return sessionStorage.getItem(this.name)
   }
   public setSessionStorage(value: string) {
-    return sessionStorage.setItem(this.name, value)
+    return sessionStorage.setItem(this.name, JSON.stringify(value))
   }
   public removeSessionStorage() {
     return sessionStorage.removeItem(this.name)
@@ -24,6 +24,6 @@ class LocalStorage {
 }
 
 const accessToken = new LocalStorage('access_token')
-const user = new LocalStorage('user')
+const userStorage = new LocalStorage('user')
 
-export { accessToken, user }
+export { accessToken, userStorage }

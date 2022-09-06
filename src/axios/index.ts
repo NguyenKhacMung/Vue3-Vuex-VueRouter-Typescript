@@ -17,14 +17,13 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 axios.interceptors.request.use(
   (config: AxiosRequestConfig): AxiosRequestConfig => {
-    console.log('config', config)
-    const token = accessToken.getLocalStorage()
-    console.log('token', token)
+    const token = JSON.parse(accessToken.getLocalStorage()!)
     if (token) {
       config.headers!.Authorization = 'Bearer ' + token
     } else {
       delete axios.defaults.headers.common['Authorization']
     }
+    console.log('config', config)
     return config
   },
   (error: AxiosError): Promise<AxiosError> => {

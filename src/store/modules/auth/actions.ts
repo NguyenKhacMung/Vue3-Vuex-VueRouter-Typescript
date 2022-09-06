@@ -26,8 +26,9 @@ export const actions: ActionTree<State, IRootState> & Actions = {
       const response = await authService.postAuth(payload)
       commit(AuthMutationTypes.LOGIN_SUCCESS, response.data)
       router.push('/')
+      return Promise.resolve(response.data)
     } catch (error) {
-      console.log(error)
+      return Promise.reject(error)
     }
   },
   [AuthActionTypes.LOG_OUT]({ commit }: AugmentedActionContext) {
