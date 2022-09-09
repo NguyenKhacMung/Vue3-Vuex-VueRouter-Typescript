@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link active" aria-current="page" href="#" to="/"
+              <router-link class="nav-link" aria-current="page" href="#" to="/"
                 >Todo</router-link
               >
             </li>

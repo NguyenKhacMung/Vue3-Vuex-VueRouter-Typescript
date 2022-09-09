@@ -7,22 +7,24 @@ const routes: Array<RouteRecordRaw> = [
     path: PATH.LOGIN,
     name: 'Login',
     component: () => import('@/views/login/LoginView.vue'),
+    props: { requiresAuth: true },
   },
   {
-    path: '/',
-    name: 'home',
+    path: PATH.ROOT,
+    name: 'Home',
     component: () => import('@/views/home/HomeView.vue'),
     meta: { requiresAuth: true },
+    // redirect: '/todo',
     children: [
       {
         path: '',
-        name: 'todo',
+        name: 'Todo',
         component: () => import('@/views/home/todo/TodoView.vue'),
         meta: { requiresAuth: true },
       },
       {
         path: PATH.ABOUT,
-        name: 'about',
+        name: 'About',
         component: () => import('@/views/home/about/AboutView.vue'),
         meta: { requiresAuth: true },
       },
@@ -38,16 +40,11 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'exact-active',
 })
 
 router.beforeEach((to, from, next) => {
-  // console.log('to', to, 'from', from, 'next', next)
-
-  // if (!authRequired && !loggedIn) {
-  //   return next('/login')
-  // }
-
-  // next()
   const loggedIn = JSON.parse(userStorage.getLocalStorage()!)
   if (to.meta.requiresAuth) {
     if (!loggedIn) {
@@ -62,6 +59,8 @@ router.beforeEach((to, from, next) => {
     }
     next()
   }
+
+  document.title = (to.name as string) || 'TodoApp'
 })
 
 export default router
