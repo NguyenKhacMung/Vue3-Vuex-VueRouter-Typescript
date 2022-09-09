@@ -23,7 +23,7 @@ class LocalStorage {
   }
 }
 
-const accessToken = new LocalStorage('access_token')
+// const accessToken = new LocalStorage('access_token')
 const userStorage = new LocalStorage('user')
 
-export { accessToken, userStorage }
+export { userStorage }

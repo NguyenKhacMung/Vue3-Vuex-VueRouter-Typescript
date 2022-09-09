@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { AuthActionTypes } from './../store/modules/auth/action-types'
-import { accessToken } from '@/storage'
+import { userStorage } from '@/storage'
 import { store } from '@/store'
 
 const instance: AxiosInstance = axios.create({
@@ -17,7 +17,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 axios.interceptors.request.use(
   (config: AxiosRequestConfig): AxiosRequestConfig => {
-    const token = JSON.parse(accessToken.getLocalStorage()!)
+    const token = JSON.parse(userStorage.getLocalStorage()!)?.accessToken
     if (token) {
       config.headers!.Authorization = 'Bearer ' + token
     } else {

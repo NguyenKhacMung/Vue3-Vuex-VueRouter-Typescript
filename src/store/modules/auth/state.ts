@@ -1,13 +1,16 @@
 import { userStorage } from '@/storage'
 
-export interface IUser {
+export interface User {
   id: string
   username: string
-  password?: string
   email: string
 }
+export interface IUser {
+  accessToken: string
+  user: IUser
+}
 export interface State {
-  user?: IUser
+  user: IUser | null
   isAuthenticated: boolean
 }
 
@@ -19,5 +22,5 @@ export const state: State = user
     }
   : {
       isAuthenticated: false,
-      user: null as any,
+      user: null,
     }

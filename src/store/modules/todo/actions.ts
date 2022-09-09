@@ -2,7 +2,7 @@ import { ActionContext, ActionTree } from 'vuex'
 import { TodosActionTypes } from './action-types'
 import { TodosMutationTypes } from './mutation-types'
 import { Mutations } from './mutations'
-import todoService from '@/services/todos'
+import { todoService } from '@/services'
 import { IRootState } from '@/store/interfaces'
 import { State, Todo } from './state'
 
@@ -14,24 +14,16 @@ type AugmentedActionContext = {
 } & Omit<ActionContext<State, IRootState>, 'commit'>
 
 export interface Actions {
-  [TodosActionTypes.GET_ALL_TODOS]({
-    commit,
-  }: AugmentedActionContext): Promise<void>
+  [TodosActionTypes.GET_ALL_TODOS]({ commit }: AugmentedActionContext): Promise<void>
 
   [TodosActionTypes.GET_TODO_BY_STATUS](
     { commit }: AugmentedActionContext,
     payload: any
   ): Promise<void>
 
-  [TodosActionTypes.UPDATE_TODO](
-    { commit }: AugmentedActionContext,
-    payload: any
-  ): Promise<void>
+  [TodosActionTypes.UPDATE_TODO]({ commit }: AugmentedActionContext, payload: any): Promise<void>
 
-  [TodosActionTypes.ADD_TODO](
-    { commit }: AugmentedActionContext,
-    payload: Todo
-  ): Promise<void>
+  [TodosActionTypes.ADD_TODO]({ commit }: AugmentedActionContext, payload: Todo): Promise<void>
 }
 
 export const actions: ActionTree<State, IRootState> & Actions = {

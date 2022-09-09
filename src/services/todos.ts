@@ -5,7 +5,7 @@ import { Todo } from '@/store/modules/todo/state'
 const baseUrl = process.env.BASE_URL
 const getAllTodosUrl = `${baseUrl}/todos`
 
-export default {
+export const todoService = {
   getAllTodos: (): Promise<AxiosResponse> => axios.get<Todo[]>(`/todos`),
   getTodoByStatus: (status: string) => axios.get<Todo[]>(`/todos?status=${status}`),
   updateTodo: (id: string, body: any) => axios.patch<Todo>(`/todos/${id}`, body),
